@@ -21,11 +21,15 @@ def xxx():
     Z = []
     result=""
     for c in range(x, y + 1):
-        try:
-            Z.append(input(f"{c}-> "))
-        except KeyboardInterrupt:
-            print("\n   exit program.\n\n\n\n")
-            sys.exit()
+        while True:
+            try:
+                Z.append(input(f"{c}-> "))
+                break
+            except ValueError:
+                continue
+            except KeyboardInterrupt:
+                print("\n   exit program.\n\n\n\n")
+                sys.exit()
 
 
     for a, b in zip(range(x, y + 1), Z):
@@ -39,11 +43,14 @@ def xxx():
 if __name__ == '__main__':
     while True:
         xxx()
-        try:
-            i=list(map(int,input(f"0 is exit , other is comtinue.\n >>")))
-        except KeyboardInterrupt:
-            print("\n   exit program.\n\n\n\n")
-            sys.exit()
+        while True:
+            try:
+                i=list(map(int,input(f"0 is exit , other is comtinue.\n >>")))
+            except ValueError:
+                continue
+            except KeyboardInterrupt:
+                print("\n   exit program.\n\n\n\n")
+                sys.exit()
 
         if i[0]==0:
             print("\n   exit program.\n\n\n\n")
