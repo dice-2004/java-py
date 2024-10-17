@@ -29,7 +29,7 @@ def xxx():
 
 
     for a, b in zip(range(x, y + 1), Z):
-        result+= (f"\n({a}){b}")
+        result+= (f"({a}){b}")
 
     print(result)
     print("\n   result is copied to clipboard.\n")
