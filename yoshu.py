@@ -52,7 +52,9 @@ if __name__ == '__main__':
                 print("\n   exit program.\n\n\n\n")
                 sys.exit()
 
-        if i[0]==0:
-            print("\n   exit program.\n\n\n\n")
-            sys.exit()
+            if i[0]==0:
+                print("\n   exit program.\n\n\n\n")
+                sys.exit()
+            else:
+                break
         print("\n")
